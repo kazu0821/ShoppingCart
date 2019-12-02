@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity
     };
 
     Integer[] imgid={
-            R.drawable.peach,
-            R.drawable.tomato,
+            R.drawable.peach,R.drawable.tomato,
             R.drawable.squash
     };
 

@@ -43,13 +43,11 @@ public class DetailActivity extends AppCompatActivity {
         price3 = findViewById(R.id.textView15);
         price3.setText("$"+val[2] *1.15 +"");
 
+
+
         total = findViewById(R.id.textView17);
 
-        float tomato = Float.parseFloat(price1.getText().toString().substring(1));
-        float peach =Float.parseFloat(price2.getText().toString().substring(1));
-        float squash = Float.parseFloat(price1.getText().toString().substring(1));
-
-        total.setText("$"+(tomato + peach+ squash)+"");
+        //total.setText("$" + Float.parseFloat(price1.getText().toString()) + Float.parseFloat(price2.getText().toString())+ Float.parseFloat(price3.getText().toString())+"");
 
     }
 }
