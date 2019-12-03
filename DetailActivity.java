@@ -1,18 +1,50 @@
 package com.example.shoppingcartnew;
 
 import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
+
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
-    TextView txt1 , txt2, txt3,txt4, txt5 , price1, price2, price3, price4, price5,  total;
+
+    /* This is declaring the text data value,
+    and this textview will show up the apps place.  */
+    TextView txt1;
+            TextView txt2;
+    TextView txt3;
+            TextView txt4;
+    TextView txt5;
+            TextView txt6;
+            TextView txt7;
+
+            TextView price1;
+    TextView price2;
+            TextView price3;
+    TextView price4;
+            TextView price5;
+            TextView price6;
+            TextView price7;
+
+    TextView total;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        /*
+        This parameter will calculate how much user bought each product,
+         and calculate tax and shipping cost and show up the total cost fee in this parameter
+        *
+        * */
         setContentView(R.layout.activity_detail);
 
         Intent it=getIntent();
@@ -60,8 +92,11 @@ public class DetailActivity extends AppCompatActivity {
         float tomato = Float.parseFloat(price1.getText().toString().substring(1));
         float peach = Float.parseFloat(price2.getText().toString().substring(1));
         float squash = Float.parseFloat(price3.getText().toString().substring(1));
+
         float orange = Float.parseFloat(price4.getText().toString().substring(1));
         float apple = Float.parseFloat(price5.getText().toString().substring(1));
+
+
 
 
         total.setText("$"+(tomato + peach+ squash+ orange+ apple)+"");
