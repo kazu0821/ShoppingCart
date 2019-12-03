@@ -34,10 +34,12 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
         TextView titleText = (TextView) rowView.findViewById(R.id.title);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+
         TextView subtitleText = (TextView) rowView.findViewById(R.id.subtitle);
         EditText quantity=(EditText)rowView.findViewById(R.id.quantity);
 
         titleText.setText(maintitle[position]);
+
         imageView.setImageResource(imgid[position]);
         subtitleText.setText(subtitle[position]);
 

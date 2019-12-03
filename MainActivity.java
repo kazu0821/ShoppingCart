@@ -20,17 +20,24 @@ public class MainActivity extends AppCompatActivity
 
     String[] maintitle ={
             "Peach","Tomato",
-            "Squash"
+            "Squash", "Orange", "Apple",
+
     };
 
     String[] subtitle ={
             "$2.34","$1.29",
-            "$1.15"
+            "$1.15", "$1.49", "$1.17"
+
     };
 
     Integer[] imgid={
-            R.drawable.peach,R.drawable.tomato,
-            R.drawable.squash
+            R.drawable.peach,
+            R.drawable.tomato,
+            R.drawable.squash,
+            R.drawable.orange,
+            R.drawable.apple,
+
+
     };
 
 
@@ -73,6 +80,14 @@ public class MainActivity extends AppCompatActivity
 
                     Toast.makeText(getApplicationContext(),"Place Your Fifth Option Code",Toast.LENGTH_SHORT).show();
                 }
+                else if(position == 5) {
+
+                    Toast.makeText(getApplicationContext(),"Place Your Sixth Option Code",Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
 
             }
         });
@@ -82,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent it=new Intent(getBaseContext(),DetailActivity.class);
 
-                int val[]=new int[3];
+                int val[]=new int[5];
 
                 for(int i=0;i<list.getCount();i++)
                 {
