@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -14,23 +16,33 @@ public class DetailActivity extends AppCompatActivity {
 
     /* This is declaring the text data value,
     and this textview will show up the apps place.  */
+
     TextView txt1;
-            TextView txt2;
+    TextView txt2;
     TextView txt3;
-            TextView txt4;
+    TextView txt4;
     TextView txt5;
-            TextView txt6;
-            TextView txt7;
+    TextView txt6;
+    TextView txt7;
+    TextView txt8;
+    TextView txt9;
+    TextView txt10;
+    TextView txt11;
 
-            TextView price1;
+    TextView price1;
     TextView price2;
-            TextView price3;
+    TextView price3;
     TextView price4;
-            TextView price5;
-            TextView price6;
-            TextView price7;
+    TextView price5;
+    TextView price6;
+    TextView price7;
+    TextView price8;
+    TextView price9;
+    TextView price10;
+    TextView price11;
 
-    TextView total;
+
+    Button btnCheckout;
 
 
 
@@ -50,6 +62,9 @@ public class DetailActivity extends AppCompatActivity {
         Intent it=getIntent();
 
         int val[]=it.getIntArrayExtra("values");
+
+        btnCheckout=findViewById(R.id.button2);
+
 
         for(int i=0;i<val.length;i++)
         {
@@ -71,6 +86,21 @@ public class DetailActivity extends AppCompatActivity {
         txt5=findViewById(R.id.textView22);
         txt5.setText(val[4]+"");
 
+        txt6=findViewById(R.id.textView26);
+        txt6.setText(val[5]+"");
+
+        txt7=findViewById(R.id.textView29);
+        txt7.setText(val[6]+"");
+
+        txt8=findViewById(R.id.textView39);
+        txt8.setText(val[7]+"");
+
+        txt9=findViewById(R.id.textView42);
+        txt9.setText(val[8]+"");
+
+
+
+
         price1 = findViewById(R.id.textView13);
         price1.setText("$"+val[0] *1.29 +"");
 
@@ -86,20 +116,53 @@ public class DetailActivity extends AppCompatActivity {
         price5 = findViewById(R.id.textView24);
         price5.setText("$"+val[4] *1.17 +"");
 
+        price6 = findViewById(R.id.textView27);
+        price6.setText("$"+val[5] *2.45 +"");
 
-        total = findViewById(R.id.textView17);
+        price7 = findViewById(R.id.textView30);
+        price7.setText("$"+val[6] *3.25 +"");
 
-        float tomato = Float.parseFloat(price1.getText().toString().substring(1));
-        float peach = Float.parseFloat(price2.getText().toString().substring(1));
-        float squash = Float.parseFloat(price3.getText().toString().substring(1));
+        price8 = findViewById(R.id.textView40);
+        price8.setText("$"+val[7] *2.31 +"");
 
-        float orange = Float.parseFloat(price4.getText().toString().substring(1));
-        float apple = Float.parseFloat(price5.getText().toString().substring(1));
-
-
+        price9 = findViewById(R.id.textView43);
+        price9.setText("$"+val[8] *0.98 +"");
 
 
-        total.setText("$"+(tomato + peach+ squash+ orange+ apple)+"");
+
+
+        //total = findViewById(R.id.textView17);
+
+
+
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it1=new Intent(getApplicationContext(),checkoutActivity.class);
+
+                float tomato = Float.parseFloat(price1.getText().toString().substring(1));
+                float peach = Float.parseFloat(price2.getText().toString().substring(1));
+                float squash = Float.parseFloat(price3.getText().toString().substring(1));
+                float orange = Float.parseFloat(price4.getText().toString().substring(1));
+                float apple = Float.parseFloat(price5.getText().toString().substring(1));
+
+                float grape = Float.parseFloat(price6.getText().toString().substring(1));
+                float watermelon = Float.parseFloat(price7.getText().toString().substring(1));
+
+                float lemon = Float.parseFloat(price8.getText().toString().substring(1));
+                float strawberry= Float.parseFloat(price9.getText().toString().substring(1));
+
+                Log.w("Activity","Data1: ");
+
+                float total= (tomato + peach+ squash+ orange+ apple+ grape + watermelon+ lemon + strawberry);
+                it1.putExtra("total",total);
+                Log.w("Activity","Data1: "+total);
+                startActivity(it1);
+            }
+        });
+
+        //total.setText("$"+(tomato + peach+ squash+ orange+ apple)+"");
 
     }
 }

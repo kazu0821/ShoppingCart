@@ -1,7 +1,7 @@
 package com.example.shoppingcartnew;
 
-import android.app.Activity;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +15,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] maintitle;
+
     private final String[] subtitle;
     private final Integer[] imgid;
 
@@ -30,6 +31,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
     }
 
     public View getView(int position,View view,ViewGroup parent) {
+
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.mylist, null,true);
 
