@@ -98,6 +98,8 @@ public class DetailActivity extends AppCompatActivity {
         txt9=findViewById(R.id.textView42);
         txt9.setText(val[8]+"");
 
+        txt10=findViewById(R.id.textView47);
+        txt10.setText(val[9]+"");
 
 
 
@@ -129,6 +131,8 @@ public class DetailActivity extends AppCompatActivity {
         price9.setText("$"+val[8] *0.98 +"");
 
 
+        price10 = findViewById(R.id.textView48);
+        price10.setText("$"+val[8] *1.23 +"");
 
 
         //total = findViewById(R.id.textView17);
@@ -140,6 +144,9 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it1=new Intent(getApplicationContext(),checkoutActivity.class);
+
+
+                // I think I can change this part
 
                 float tomato = Float.parseFloat(price1.getText().toString().substring(1));
                 float peach = Float.parseFloat(price2.getText().toString().substring(1));
@@ -153,9 +160,11 @@ public class DetailActivity extends AppCompatActivity {
                 float lemon = Float.parseFloat(price8.getText().toString().substring(1));
                 float strawberry= Float.parseFloat(price9.getText().toString().substring(1));
 
+                float banana =Float.parseFloat(price10.getText().toString().substring(1));
+
                 Log.w("Activity","Data1: ");
 
-                float total= (tomato + peach+ squash+ orange+ apple+ grape + watermelon+ lemon + strawberry);
+                float total= (tomato + peach+ squash+ orange+ apple+ grape + watermelon+ lemon + strawberry+ banana);
                 it1.putExtra("total",total);
                 Log.w("Activity","Data1: "+total);
                 startActivity(it1);

@@ -176,57 +176,57 @@ public class MainActivity extends AppCompatActivity
                }
 
 
-//               else if(position ==11)
-//               {
-//
-//                   //code specific to 7th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Eighth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//               else if(position == 12)
-//               {
-//
-//                   //code specific to 8th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Nineth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//               else if(position == 13)
-//               {
-//
-//                   //code specific to 9th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Tenth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//
-//               else if(position == 14)
-//               {
-//
-//                   //code specific to 10th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Eleventh Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//
-//               else if(position == 15)
-//               {
-//
-//                   //code specific to 7th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Eighth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//               else if(position == 16)
-//               {
-//
-//                   //code specific to 8th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Nineth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//               else if(position == 17)
-//               {
-//
-//                   //code specific to 9th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Tenth Option Code",Toast.LENGTH_SHORT).show();
-//               }
-//
-//               else if(position == 18)
-//               {
-//
-//                   //code specific to 10th list item
-//                   Toast.makeText(getApplicationContext(),"Place Your Eleventh Option Code",Toast.LENGTH_SHORT).show();
-//               }
+               else if(position ==11)
+               {
+
+                   //code specific to 7th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Eighth Option Code",Toast.LENGTH_SHORT).show();
+               }
+               else if(position == 12)
+               {
+
+                   //code specific to 8th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Nineth Option Code",Toast.LENGTH_SHORT).show();
+               }
+               else if(position == 13)
+               {
+
+                   //code specific to 9th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Tenth Option Code",Toast.LENGTH_SHORT).show();
+               }
+
+               else if(position == 14)
+               {
+
+                   //code specific to 10th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Eleventh Option Code",Toast.LENGTH_SHORT).show();
+               }
+
+               else if(position == 15)
+               {
+
+                   //code specific to 7th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Eighth Option Code",Toast.LENGTH_SHORT).show();
+               }
+               else if(position == 16)
+               {
+
+                   //code specific to 8th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Nineth Option Code",Toast.LENGTH_SHORT).show();
+               }
+               else if(position == 17)
+               {
+
+                   //code specific to 9th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Tenth Option Code",Toast.LENGTH_SHORT).show();
+               }
+
+               else if(position == 18)
+               {
+
+                   //code specific to 10th list item
+                   Toast.makeText(getApplicationContext(),"Place Your Eleventh Option Code",Toast.LENGTH_SHORT).show();
+               }
 
 
 

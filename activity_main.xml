@@ -19,7 +19,6 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:descendantFocusability="afterDescendants"
         android:layout_marginBottom="50dp">
     </ListView>
 
@@ -27,9 +26,8 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="250px"
+            android:layout_marginLeft="400px"
             android:layout_marginTop="1400px"
-            android:text="Place Order"
-            android:textSize="30sp" />
+            android:text="Place Order" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

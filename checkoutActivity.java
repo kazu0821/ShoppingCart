@@ -7,6 +7,12 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
 public class checkoutActivity extends AppCompatActivity {
 
 
@@ -14,6 +20,8 @@ public class checkoutActivity extends AppCompatActivity {
     TextView shipping;
     TextView tax;
     TextView sum;
+    TextView messageLog_TextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,13 +39,44 @@ public class checkoutActivity extends AppCompatActivity {
         shipping=findViewById(R.id.textView34);
         tax=findViewById(R.id.textView35);
 
+        float Tax = (float)(subtotal*0.075);
+
         sum=findViewById(R.id.textView37);
+
+
+        messageLog_TextView = findViewById(R.id.messageLog_TextView);
+
+
 
         sub.setText("$"+subtotal+"");
         shipping.setText("$20");
-        tax.setText("7.5%");
-        float total= (float)(subtotal+(subtotal*0.075)+20.0);
+        tax.setText("$"+Tax+"");
+        float total= (float)(subtotal+(Tax)+20.0);
 
         sum.setText("$"+total+"");
+
+        String SERVER_IP;
+        int SERVER_PORT;
+
+        Socket socket;
+        PrintWriter output;
+        InputStreamReader in;
+        BufferedReader br;
+
+        try {
+            socket = new Socket("10.0.0.124", 7000);
+            output = new PrintWriter(socket.getOutputStream(), true);
+            in = new InputStreamReader(socket.getInputStream());
+            br = new BufferedReader(in);
+
+            final String message = br.readLine();
+            final String newMessage = message.replaceAll("▼", "\n");
+
+            messageLog_TextView.setText( newMessage  );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
