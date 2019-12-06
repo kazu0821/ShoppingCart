@@ -1,4 +1,4 @@
-package com.example.shoppingcartnew;
+package com.zyxe.shopping;
 
 
 import android.app.Activity;
@@ -19,8 +19,9 @@ public class MyListAdapter extends ArrayAdapter<String> {
     private final String[] subtitle;
     private final Integer[] imgid;
 
-    public MyListAdapter(Activity context, String[] maintitle,String[] subtitle, Integer[] imgid) {
-        super(context, R.layout.mylist, maintitle);
+    public MyListAdapter(Activity context, String[] maintitle,String[] subtitle, Integer[] imgid)
+    {
+        super(context, R.layout.my_list, maintitle);
         // TODO Auto-generated constructor stub
 
         this.context=context;
@@ -33,7 +34,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
     public View getView(int position,View view,ViewGroup parent) {
 
         LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.mylist, null,true);
+        View rowView=inflater.inflate(R.layout.my_list, null,true);
 
         TextView titleText = (TextView) rowView.findViewById(R.id.title);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
