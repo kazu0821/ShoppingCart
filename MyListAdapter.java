@@ -11,6 +11,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ This class
+ @Author Kazuki Kanke
+
+ This file will list item, and it will show up each of product name.xs
+ */
+
 public class MyListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;

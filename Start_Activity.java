@@ -1,9 +1,6 @@
 package com.zyxe.shopping;
 
 
-/* This class file is labeling the fruits and vegetable pictures.
-* I can change the the name of product and price in here.
-* */
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +13,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ This class
+ @Author Kazuki Kanke
+ */
+/* This class file is labeling the fruits and vegetable pictures.
+ * I can change the the name of product and price in here.
+ * */
+
+
 
 public class Start_Activity extends AppCompatActivity
 {

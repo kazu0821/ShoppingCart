@@ -2,7 +2,11 @@ package com.zyxe.shopping;
 
 //  Reference:
 //      https://www.tutorialspoint.com/sending-and-receiving-data-with-sockets-in-android
-//      Sam Portillo made the following modifications:
+/**
+ This class
+
+ */
+
 //      11/20/2019  Thread 2 does not loop.
 //      11/20/2019  Thread 3 creates a Thread 2.
 //      11/26/2019  Toggle Connect / Disconnect Button
@@ -14,8 +18,18 @@ package com.zyxe.shopping;
 //      Go into applications & Uninstall.
 //      11/25/2019  Idea to add Button to clear terminal.
 //      11/26/2019  Does not crash.
-
 //package com.zyxe.client;
+
+
+/**
+ * To receive the socket connection from the SocketServer class.
+ * Continue the socket connection.
+ * Receive commands from the client and relay those commands to an instance of
+ * the FileSystem class.
+ * Forward the response of the FileSystem class to the client via the socket
+ * connection.
+ @Author Kazuki Kanke
+ */
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;

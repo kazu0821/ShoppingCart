@@ -21,6 +21,14 @@ public class CheckOut extends AppCompatActivity {
     Button sendtoserver_Button;
 
 
+    /**
+     This class
+     @Author Kazuki Kanke
+
+     This class will show total price and shipping cost fee.
+
+     And calculate how much it will be
+     */
 
 
 

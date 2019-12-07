@@ -9,6 +9,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ This class
+ @Author Kazuki Kanke
+
+ This class label the detail on apps.
+ User can see what they bought.
+ And this class will calculate each of price
+ and it will trasnfer th the check out file.
+ */
+
 public class Detail extends AppCompatActivity {
 
     private static final String TAG = "SAM";
